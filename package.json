@@ -1,0 +1,24 @@
+{
+  "name": "spotify",
+  "version": "1.0.0",
+  "description": "Reproduction of the Spotify website GUI with HTML and SASS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "node-sass -w scss -o css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Biskotte23/spotify_website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Biskotte23/spotify_website/issues"
+  },
+  "homepage": "https://github.com/Biskotte23/spotify_website#readme",
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  }
+}
