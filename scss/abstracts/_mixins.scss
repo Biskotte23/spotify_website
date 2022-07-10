@@ -1,0 +1,35 @@
+@mixin small {
+  @media only screen and (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media only screen and (min-width: 481px) and (max-width: 991px) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media only screen and (min-width: 992px) and (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin responsive($device) {
+  @if $device == small {
+    @include small {
+      @content;
+    }
+  } @else if $device == medium {
+    @include medium {
+      @content;
+    }
+  } @else if $device == large {
+    @include large {
+      @content;
+    }
+  } @else {
+    @error "The argument $device is incorrect.";
+  }
+}
