@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  font-size: 10px;
+  font-family: $font;
+  min-width: 100%;
+  min-height: 100vh;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  color: $black;
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  outline: none;
+}
