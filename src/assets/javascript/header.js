@@ -33,6 +33,9 @@ const createMenu = () => {
 
   const mobileMenuContent = document.createElement("div");
   mobileMenuContent.classList.add("mobile-menu-content");
+  mobileMenuContent.addEventListener("click", (event) => {
+    event.stopPropagation();
+  });
 
   const headerMenu = document.querySelector(".header-content nav ul");
   const logo = document.querySelector("a.home-link");
