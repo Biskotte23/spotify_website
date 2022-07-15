@@ -11,6 +11,8 @@ module.exports = {
     premium: path.join(__dirname, "src/pages/premium/premium.js"),
     signin: path.join(__dirname, "src/pages/signin/signin.js"),
     support: path.join(__dirname, "src/pages/support/support.js"),
+
+    header: path.join(__dirname, "src/assets/javascript/header.js"),
   },
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -42,32 +44,32 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: "index.html",
       template: path.join(__dirname, "src/index.html"),
-      chunks: ["main"],
+      chunks: ["main", "header"],
     }),
     new HtmlWebpackPlugin({
       filename: "download.html",
       template: path.join(__dirname, "src/pages/download/download.html"),
-      chunks: ["download"],
+      chunks: ["download", "header"],
     }),
     new HtmlWebpackPlugin({
       filename: "login.html",
       template: path.join(__dirname, "src/pages/login/login.html"),
-      chunks: ["login"],
+      chunks: ["login", "header"],
     }),
     new HtmlWebpackPlugin({
       filename: "premium.html",
       template: path.join(__dirname, "src/pages/premium/premium.html"),
-      chunks: ["premium"],
+      chunks: ["premium", "header"],
     }),
     new HtmlWebpackPlugin({
       filename: "signin.html",
       template: path.join(__dirname, "src/pages/signin/signin.html"),
-      chunks: ["signin"],
+      chunks: ["signin", "header"],
     }),
     new HtmlWebpackPlugin({
       filename: "support.html",
       template: path.join(__dirname, "src/pages/support/support.html"),
-      chunks: ["support"],
+      chunks: ["support", "header"],
     }),
   ],
   devtool: "source-map",

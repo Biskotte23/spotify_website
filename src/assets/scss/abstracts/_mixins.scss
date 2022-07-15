@@ -5,13 +5,19 @@
 }
 
 @mixin medium {
-  @media only screen and (min-width: 481px) and (max-width: 991px) {
+  @media only screen and (min-width: 481px) and (max-width: 992px) {
     @content;
   }
 }
 
 @mixin large {
-  @media only screen and (min-width: 992px) and (max-width: 1200px) {
+  @media only screen and (min-width: 993px) and (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin extra-large {
+  @media only screen and (min-width: 1201px) {
     @content;
   }
 }
@@ -27,6 +33,10 @@
     }
   } @else if $device == large {
     @include large {
+      @content;
+    }
+  } @else if $device == extra-large {
+    @include extra-large {
       @content;
     }
   } @else {

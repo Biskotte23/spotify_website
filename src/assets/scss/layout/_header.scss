@@ -1,13 +1,14 @@
 header {
   width: 100%;
   height: 8rem;
+  position: relative;
   background-color: $black;
 
-  @include responsive(small) {
+  @include responsive(medium) {
     height: 5.4rem;
   }
 
-  @include responsive(medium) {
+  @include responsive(small) {
     height: 5.4rem;
   }
 
@@ -21,16 +22,12 @@ header {
     justify-content: space-between;
     align-items: center;
 
-    @include responsive(small) {
-      max-width: 750px;
+    @include responsive(large) {
+      max-width: 970px;
     }
 
     @include responsive(medium) {
       max-width: 750px;
-    }
-
-    @include responsive(large) {
-      max-width: 970px;
     }
 
     a {
@@ -42,7 +39,7 @@ header {
       }
     }
 
-    nav {
+    nav.header-navigation-list {
       ul {
         height: 100%;
         display: flex;
@@ -58,13 +55,8 @@ header {
             justify-content: center;
             align-items: center;
             font-size: 1.6rem;
-            font-weight: 100;
             cursor: pointer;
             color: $white;
-
-            &.dark {
-              color: $dark-white;
-            }
 
             &:hover {
               color: $light-green;
@@ -80,17 +72,21 @@ header {
             background-color: $white;
           }
 
+          &.authentification {
+            color: $dark-white;
+          }
+
           &:last-child {
             padding-right: 0px;
           }
         }
       }
 
-      @include responsive(small) {
+      @include responsive(medium) {
         display: none;
       }
 
-      @include responsive(medium) {
+      @include responsive(small) {
         display: none;
       }
     }
