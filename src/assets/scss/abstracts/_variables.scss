@@ -1,9 +1,13 @@
-// Colors
-$white: #fff;
-$dark-white: #d9dadc;
-$light-green: #1ed760;
-$green: #117a37;
-$black: #000;
+:root {
+  // Colors
+  --white: #fff;
+  --dark-white: #d9dadc;
+  --light-green: #1ed760;
+  --light-green-2: #2de26d;
+  --green: #117a37;
+  --black: #000;
+  --blue: rgb(41, 65, 171);
 
-// Fonts
-$font: Circular, spotify-circular, Helvetica, Arial, sans-serif;
+  // Fonts
+  --font: Circular, spotify-circular, Helvetica, Arial, sans-serif;
+}

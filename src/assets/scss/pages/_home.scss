@@ -1,0 +1,69 @@
+section.presentation {
+  width: 100%;
+  min-height: 85rem;
+  height: 100vh;
+  background-color: var(--blue);
+
+  @include responsive(large) {
+    min-height: auto;
+  }
+
+  .background {
+    width: 100%;
+    height: 100%;
+    background-image: url("https://www-growth.scdn.co/static/home/bursts.svg");
+    background-size: 175%;
+    background-position: 46% 4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include responsive(large) {
+      background-image: url("https://www-growth.scdn.co/static/home/bursts-tablet.svg");
+      background-size: 153%;
+      background-position: right 40% center;
+    }
+
+    h1 {
+      width: 84rem;
+      font-size: 15.6rem;
+      color: var(--light-green);
+      text-indent: -2.5em;
+      text-align: center;
+      transform: translate(70px, 0px);
+      letter-spacing: -8px;
+      line-height: 16rem;
+
+      @include responsive(large) {
+        max-width: 70rem;
+        font-size: 9.8rem;
+        text-indent: 0;
+        transform: none;
+        line-height: 10rem;
+      }
+    }
+
+    p {
+      margin: 4rem 0;
+      font-weight: 300;
+      color: var(--light-green);
+      font-size: 1.8rem;
+      text-align: center;
+
+      @include responsive(large) {
+        max-width: 40rem;
+        margin: 2.4rem 0 4rem 0;
+      }
+    }
+
+    .btn {
+      &-green {
+        color: var(--blue);
+      }
+      &-focus-border {
+        border-color: var(--white);
+      }
+    }
+  }
+}

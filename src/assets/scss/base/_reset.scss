@@ -8,7 +8,7 @@ html,
 body {
   font-size: 10px;
   font-weight: 400;
-  font-family: $font;
+  font-family: var(--font);
   min-width: 100%;
   min-height: 100vh;
 }
@@ -19,7 +19,7 @@ li {
 }
 
 a {
-  color: $black;
+  color: var(--black);
   text-decoration: none;
 }
 
