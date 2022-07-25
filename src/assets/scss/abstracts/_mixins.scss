@@ -22,24 +22,26 @@
   }
 }
 
-@mixin responsive($device) {
-  @if $device == small {
-    @include small {
-      @content;
+@mixin responsive($devices...) {
+  @each $device in $devices {
+    @if $device == small {
+      @include small {
+        @content;
+      }
+    } @else if $device == medium {
+      @include medium {
+        @content;
+      }
+    } @else if $device == large {
+      @include large {
+        @content;
+      }
+    } @else if $device == extra-large {
+      @include extra-large {
+        @content;
+      }
+    } @else {
+      @error "The argument $device is incorrect.";
     }
-  } @else if $device == medium {
-    @include medium {
-      @content;
-    }
-  } @else if $device == large {
-    @include large {
-      @content;
-    }
-  } @else if $device == extra-large {
-    @include extra-large {
-      @content;
-    }
-  } @else {
-    @error "The argument $device is incorrect.";
   }
 }

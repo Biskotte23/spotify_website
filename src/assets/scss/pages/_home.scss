@@ -4,7 +4,7 @@ section.presentation {
   height: 100vh;
   background-color: var(--blue);
 
-  @include responsive(large) {
+  @include responsive(large, medium, small) {
     min-height: auto;
   }
 
@@ -19,10 +19,16 @@ section.presentation {
     justify-content: center;
     align-items: center;
 
-    @include responsive(large) {
+    @include responsive(large, medium) {
       background-image: url("https://www-growth.scdn.co/static/home/bursts-tablet.svg");
       background-size: 153%;
       background-position: right 40% center;
+    }
+
+    @include responsive(small) {
+      background-image: url("https://www-growth.scdn.co/static/home/bursts-mobile.svg");
+      background-size: 215%;
+      background-position: center top 40%;
     }
 
     h1 {
@@ -35,12 +41,23 @@ section.presentation {
       letter-spacing: -8px;
       line-height: 16rem;
 
-      @include responsive(large) {
+      @include responsive(large, medium, small) {
+        width: 100%;
         max-width: 70rem;
         font-size: 9.8rem;
         text-indent: 0;
         transform: none;
         line-height: 10rem;
+      }
+
+      @include responsive(small) {
+        width: 100%;
+        max-width: 31rem;
+        font-size: 4.8rem;
+        text-indent: 0;
+        transform: none;
+        line-height: 5.6rem;
+        letter-spacing: -2px;
       }
     }
 
@@ -51,9 +68,16 @@ section.presentation {
       font-size: 1.8rem;
       text-align: center;
 
-      @include responsive(large) {
+      @include responsive(large, medium) {
         max-width: 40rem;
         margin: 2.4rem 0 4rem 0;
+      }
+
+      @include responsive(small) {
+        max-width: 31rem;
+        font-size: 1.6rem;
+        margin: 1.6rem 0 3.2rem 0;
+        line-height: 2.5rem;
       }
     }
 
