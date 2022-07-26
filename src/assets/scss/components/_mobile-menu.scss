@@ -12,11 +12,11 @@
   z-index: 1;
   background-color: rgba($color: #000000, $alpha: 0.7);
 
-  @include large {
+  @include responsive(large) {
     display: none;
   }
 
-  @include extra-large {
+  @include responsive(extra-large) {
     display: none;
   }
 
@@ -80,13 +80,13 @@
     display: none;
     background-color: var(--black);
 
-    @include responsive(small) {
+    @include responsive(extra-small) {
       display: flex;
       flex-direction: column;
       justify-content: center;
     }
 
-    @include responsive(medium) {
+    @include responsive(medium, small) {
       display: flex;
       flex-direction: column;
       justify-content: center;

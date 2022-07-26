@@ -1,0 +1,244 @@
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 8rem 0 5rem 0;
+  color: var(--white);
+  background-color: var(--black);
+
+  @include responsive(medium, small) {
+    padding: 5rem 0 2rem 0;
+  }
+
+  nav {
+    width: 1170px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    @include responsive(large) {
+      width: 970px;
+    }
+
+    @include responsive(medium) {
+      width: 750px;
+    }
+
+    @include responsive(small, extra-small) {
+      width: 100%;
+      padding: 0 1.5rem 0 1.5rem;
+    }
+
+    .logo-container {
+      width: 19.5rem;
+      padding: 0 1.5rem;
+
+      @include responsive(large) {
+        width: 16.66666667%;
+      }
+
+      @include responsive(medium) {
+        width: 100%;
+      }
+
+      @include responsive(small, extra-small) {
+        width: 100%;
+        padding: 0;
+      }
+
+      a.home-link {
+        display: block;
+        max-width: 132px;
+        color: var(--white);
+
+        @include responsive(medium, small) {
+          max-width: 89px;
+        }
+
+        img.logo {
+          max-width: 100%;
+        }
+      }
+    }
+
+    .usefull-links {
+      display: flex;
+      width: 50%;
+
+      @include responsive(medium) {
+        width: 100%;
+      }
+
+      @include responsive(small, extra-small) {
+        width: 100%;
+        flex-direction: column;
+      }
+
+      .links {
+        flex: 1;
+        height: 34.6rem;
+        padding: 0 1.5rem;
+
+        @include responsive(medium) {
+          height: auto;
+        }
+
+        @include responsive(small, extra-small) {
+          height: auto;
+          padding: 0;
+        }
+
+        h4 {
+          margin: 2rem 0;
+          font-size: 1.2rem;
+          color: var(--grey);
+          text-transform: uppercase;
+
+          @include responsive(medium, small) {
+            margin: 5rem 0 2.2rem 0;
+          }
+        }
+
+        ul {
+          li {
+            a {
+              display: block;
+              padding: 0.3rem 0 1.5rem 0;
+              color: var(--white);
+              font-size: 1.6rem;
+              line-height: 2.5rem;
+
+              &:hover {
+                color: var(--light-green);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .social-networks {
+      margin: 0 1.5rem 0 auto;
+      padding-top: 2rem;
+      display: flex;
+
+      @include responsive(medium) {
+        width: 100%;
+        margin: 10rem 1.5rem 1.5rem 1.5rem;
+      }
+
+      @include responsive(small, extra-small) {
+        width: 100%;
+        margin: 10rem 0 1.5rem 0;
+      }
+
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 5.4rem;
+        height: 5.4rem;
+        background-color: var(--dark-grey);
+        border-radius: 50%;
+        text-align: center;
+        margin-left: 1.5rem;
+        color: var(--white);
+
+        @include responsive(medium, small) {
+          width: 4.4rem;
+          height: 4.4rem;
+          margin-left: 0;
+          margin-right: 1.5rem;
+        }
+
+        &:hover {
+          color: var(--light-green);
+        }
+
+        i {
+          color: inherit;
+          font-size: 2.4rem;
+        }
+      }
+    }
+
+    .country {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      padding: 0 1.5rem;
+      font-size: 1.2rem;
+
+      @include responsive(small, extra-small) {
+        font-size: 1rem;
+        padding: 0;
+      }
+
+      i {
+        margin-right: 0.8rem;
+        font-size: inherit;
+        color: var(--grey);
+      }
+
+      a {
+        font-size: inherit;
+        color: var(--grey);
+        font-weight: 100;
+
+        &:hover {
+          color: var(--light-green);
+        }
+      }
+    }
+
+    .legal-links {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.2rem;
+      color: var(--grey);
+      font-weight: 100;
+
+      @include responsive(small, extra-small) {
+        font-size: 1rem;
+      }
+
+      ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-left: 1.5rem;
+        margin-right: 4.5rem;
+
+        @include responsive(small, extra-small) {
+          padding: 0;
+        }
+
+        li {
+          margin-right: 2.2rem;
+          color: inherit;
+
+          a {
+            display: block;
+            padding: 1.2rem 0;
+            color: inherit;
+
+            &:hover {
+              color: var(--light-green);
+            }
+          }
+        }
+      }
+
+      div {
+        padding: 1.2rem 0;
+        margin: 0 1.5rem 0 auto;
+        flex-shrink: 0;
+
+        @include responsive(small, extra-small) {
+          margin: 0 0 0 auto;
+        }
+      }
+    }
+  }
+}

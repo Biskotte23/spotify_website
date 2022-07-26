@@ -4,11 +4,11 @@ header {
   position: relative;
   background-color: var(--black);
 
-  @include responsive(medium) {
+  @include responsive(medium, small) {
     height: 5.4rem;
   }
 
-  @include responsive(small) {
+  @include responsive(extra-small) {
     height: 5.4rem;
   }
 
@@ -26,7 +26,7 @@ header {
       max-width: 970px;
     }
 
-    @include responsive(medium) {
+    @include responsive(medium, small) {
       max-width: 750px;
     }
 
@@ -82,11 +82,7 @@ header {
         }
       }
 
-      @include responsive(medium) {
-        display: none;
-      }
-
-      @include responsive(small) {
+      @include responsive(medium, small, extra-small) {
         display: none;
       }
     }

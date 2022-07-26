@@ -1,11 +1,17 @@
-@mixin small {
+@mixin extra-small {
   @media only screen and (max-width: 480px) {
     @content;
   }
 }
 
+@mixin small {
+  @media only screen and (min-width: 481px) and (max-width: 768px) {
+    @content;
+  }
+}
+
 @mixin medium {
-  @media only screen and (min-width: 481px) and (max-width: 992px) {
+  @media only screen and (min-width: 768px) and (max-width: 992px) {
     @content;
   }
 }
@@ -24,7 +30,11 @@
 
 @mixin responsive($devices...) {
   @each $device in $devices {
-    @if $device == small {
+    @if $device == extra-small {
+      @include extra-small {
+        @content;
+      }
+    } @else if $device == small {
       @include small {
         @content;
       }
