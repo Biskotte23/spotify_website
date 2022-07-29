@@ -1,92 +1,91 @@
-section.presentation {
-  width: 100%;
-  min-height: 85rem;
-  height: 100vh;
-  background-color: var(--blue);
-
-  @include responsive(large, medium, small, extra-small) {
-    min-height: auto;
-  }
-
-  .background {
+body.home {
+  section.presentation {
     width: 100%;
-    height: 100%;
-    background-image: url("https://www-growth.scdn.co/static/home/bursts.svg");
-    background-size: 175%;
-    background-position: 46% 4%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    min-height: 85rem;
+    height: 100vh;
+    background-color: var(--blue);
 
-    @include responsive(large, medium, small) {
-      background-image: url("https://www-growth.scdn.co/static/home/bursts-tablet.svg");
-      background-size: 153%;
-      background-position: right 40% center;
+    @include responsive(large, medium, small, extra-small) {
+      min-height: auto;
     }
 
-    @include responsive(extra-small) {
-      background-image: url("https://www-growth.scdn.co/static/home/bursts-mobile.svg");
-      background-size: 215%;
-      background-position: center top 40%;
-    }
-
-    h1 {
-      width: 84rem;
-      font-size: 15.6rem;
-      color: var(--light-green);
-      text-indent: -2.5em;
-      text-align: center;
-      transform: translate(70px, 0px);
-      letter-spacing: -8px;
-      line-height: 16rem;
+    .background {
+      width: 100%;
+      height: 100%;
+      background-image: url("https://www-growth.scdn.co/static/home/bursts.svg");
+      background-size: 175%;
+      background-position: 46% 4%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
 
       @include responsive(large, medium, small) {
-        width: 100%;
-        max-width: 70rem;
-        font-size: 9.8rem;
-        text-indent: 0;
-        transform: none;
-        line-height: 10rem;
+        background-image: url("https://www-growth.scdn.co/static/home/bursts-tablet.svg");
+        background-size: 153%;
+        background-position: right 40% center;
       }
 
       @include responsive(extra-small) {
-        width: 100%;
-        max-width: 31rem;
-        font-size: 4.8rem;
-        text-indent: 0;
-        transform: none;
-        line-height: 5.6rem;
-        letter-spacing: -2px;
-      }
-    }
-
-    p {
-      margin: 4rem 0;
-      font-weight: 300;
-      color: var(--light-green);
-      font-size: 1.8rem;
-      text-align: center;
-
-      @include responsive(large, medium, small) {
-        max-width: 40rem;
-        margin: 2.4rem 0 4rem 0;
+        background-image: url("https://www-growth.scdn.co/static/home/bursts-mobile.svg");
+        background-size: 215%;
+        background-position: center top 40%;
       }
 
-      @include responsive(extra-small) {
-        max-width: 31rem;
-        font-size: 1.6rem;
-        margin: 1.6rem 0 3.2rem 0;
-        line-height: 2.5rem;
-      }
-    }
+      h1 {
+        width: 84rem;
+        font-size: 15.6rem;
+        color: var(--light-green);
+        text-indent: -2.5em;
+        text-align: center;
+        transform: translate(70px, 0px);
+        letter-spacing: -8px;
+        line-height: 16rem;
 
-    .btn {
-      &-green {
-        color: var(--blue);
+        @include responsive(large, medium, small) {
+          width: 100%;
+          max-width: 70rem;
+          font-size: 9.8rem;
+          text-indent: 0;
+          transform: none;
+          line-height: 10rem;
+        }
+
+        @include responsive(extra-small) {
+          width: 100%;
+          max-width: 31rem;
+          font-size: 4.8rem;
+          text-indent: 0;
+          transform: none;
+          line-height: 5.6rem;
+          letter-spacing: -2px;
+        }
       }
-      &-focus-border {
-        border-color: var(--white);
+
+      p {
+        margin: 4rem 0;
+        font-weight: 300;
+        color: var(--light-green);
+        font-size: 1.8rem;
+        text-align: center;
+
+        @include responsive(large, medium, small) {
+          max-width: 40rem;
+          margin: 2.4rem 0 4rem 0;
+        }
+
+        @include responsive(extra-small) {
+          max-width: 31rem;
+          font-size: 1.6rem;
+          margin: 1.6rem 0 3.2rem 0;
+          line-height: 2.5rem;
+        }
+      }
+
+      .btn {
+        &-green {
+          color: var(--blue);
+        }
       }
     }
   }

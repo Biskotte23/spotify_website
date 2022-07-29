@@ -2,10 +2,10 @@
   position: relative;
   display: inline-block;
   border-radius: 3rem;
-  border: 0;
   touch-action: manipulation;
   align-self: center;
   vertical-align: middle;
+  border: 2px solid transparent;
 
   &-content {
     padding: 1.4rem 3.2rem;
@@ -19,17 +19,15 @@
   }
 
   &-focus-border {
-    &-white {
-      position: absolute;
-      display: block;
-      top: -6px;
-      left: -6px;
-      width: calc(100% + 12px);
-      height: calc(100% + 12px);
-      border: 3px solid transparent;
-      border-radius: 3rem;
-      pointer-events: none;
-    }
+    position: absolute;
+    display: block;
+    top: -8px;
+    left: -8px;
+    width: calc(100% + 16px);
+    height: calc(100% + 16px);
+    border: 3px solid transparent;
+    border-radius: 3rem;
+    pointer-events: none;
   }
 
   &:hover {
@@ -43,14 +41,41 @@
       &-white {
         border-color: var(--white);
       }
+
+      &-black {
+        border-color: var(--black);
+      }
     }
   }
 
   &-green {
     background-color: var(--light-green);
+    border-color: var(--light-green);
 
     &:hover {
       background-color: var(--light-green-2);
+      border-color: var(--light-green-2);
+    }
+  }
+
+  &-black {
+    color: var(--white);
+    background-color: var(--light-black);
+    border-color: var(--light-black);
+
+    &:hover {
+      background-color: var(--black);
+      border-color: var(--black);
+    }
+  }
+
+  &-transparent {
+    color: var(--white);
+    background-color: rgba($color: #000000, $alpha: 0);
+    border-color: var(--white);
+
+    &:hover {
+      background-color: rgba($color: #000000, $alpha: 0.2);
     }
   }
 }

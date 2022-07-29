@@ -1,5 +1,11 @@
 @font-face {
   font-family: Circular;
+  src: url(./../fonts/Circular/CircularStd-Light.otf);
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: Circular;
   src: url(./../fonts/Circular/CircularStd-Book.otf);
   font-weight: 300;
 }
@@ -8,6 +14,12 @@
   font-family: Circular;
   src: url(./../fonts/Circular/CircularStd-Medium.otf);
   font-weight: 400;
+}
+
+@font-face {
+  font-family: Circular;
+  src: url(./../fonts/Circular/CircularStd-Bold.otf);
+  font-weight: 600;
 }
 
 @font-face {
